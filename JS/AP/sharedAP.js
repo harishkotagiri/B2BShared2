@@ -1,12 +1,12 @@
 const getTaxData = (reqObj) => {
     const tempObj = (typeof reqObj !== 'object') ? JSON.parse(reqObj) : reqObj
-    const val = tempObj.num1 + tempObj.num2 + 50;    
+    const val = parseInt(tempObj.num1) + parseInt(tempObj.num2) + 50;    
     return {tax: val};
 }
 
 const getTotalData = () => {
     const tempObj = (typeof reqObj !== 'object') ? JSON.parse(reqObj) : reqObj
-    const val = tempObj.num1 + tempObj.num2 + 20;    
+    const val = parseInt(tempObj.num1) + parseInt(tempObj.num2) + 20;    
     return {total: val};
 }
 
@@ -14,7 +14,7 @@ function getTaxOffers(rObj) {
     sendToMobile(getTaxData(rObj));
 }
 
-function getToal(rObj) {
+function getTotal(rObj) {
     sendToMobile(getTotalData(rObj));
 }
 

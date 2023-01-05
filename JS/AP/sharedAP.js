@@ -4,7 +4,7 @@ const getTaxData = (reqObj) => {
     return {tax: val};
 }
 
-const getTotalData = () => {
+const getTotalData = (reqObj) => {
     const tempObj = (typeof reqObj !== 'object') ? JSON.parse(reqObj) : reqObj
     const val = parseInt(tempObj.num1) + parseInt(tempObj.num2) + 20;    
     return {total: val};

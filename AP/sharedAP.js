@@ -15,7 +15,7 @@ function getOffers(reqObj) {
     if (typeof tempObj !== 'object') {
         tempObj = JSON.parse(reqObj)
     }
-    let val = tempObj.num1 + tempObj.num2 + 50;
+    let val = Number(tempObj.num1) + Number(tempObj.num2) + 50;
     val = val ? val : 'error in external JS';
     let data = {type: 'Response from External JS:', val};
     sendToMobile(data);

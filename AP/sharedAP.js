@@ -11,13 +11,13 @@ function getToal(val1, val2) {
 }
 
 function getOffers(reqObj) {
-    let tempObj = reqObj;
-    if (typeof tempObj !== 'object') {
-        tempObj = JSON.parse(reqObj)
-    }
-    let val = tempObj.num1 + tempObj.num2 + 100;
-    val = val ? val : 'error in external JS';
-    let data = {type: 'Response from External JS:', val};
+//     let tempObj = reqObj;
+//     if (typeof tempObj !== 'object') {
+//         tempObj = JSON.parse(reqObj)
+//     }
+//     let val = tempObj.num1 + tempObj.num2 + 100;
+//     val = val ? val : 'error in external JS';
+    let data = {type: 'Response from External JS:', val: 1000};
     sendToMobile(data);
 }
 

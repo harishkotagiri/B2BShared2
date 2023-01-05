@@ -1,1 +1,1 @@
-# B2BShared2
+# Share JS files dynamically

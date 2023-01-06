@@ -6,7 +6,7 @@ const getTaxData = (reqObj) => {
 
 function getTotalData(reqObj) {
     const tempObj = (typeof reqObj !== 'object') ? JSON.parse(reqObj) : reqObj
-    const val = parseInt(tempObj.num1) + parseInt(tempObj.num2) + 20;    
+    const val = parseInt(tempObj.num1) + parseInt(tempObj.num2) + 10;    
     return {total: val};
 }
 

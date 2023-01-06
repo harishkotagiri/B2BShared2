@@ -1,10 +1,21 @@
-const getTotalData = require('../JS/AP/sharedAP.js');
+const apTests = require('../JS/AP/sharedAP.js');
 
-test("Sanity check", () => {
-    expect(true).toBe(true);
+describe("Sample test case", () => {
+    test("Sanity check", () => {
+        expect(true).toBe(true);
+    });
 });
 
-test('Get total', () => {
-    const obj = {num1: 4, num2: 2};
-    expect(getTotalData(obj)).toStrictEqual({total: 26});
-  });
+describe("Total", () => {
+    test('Get total', () => {
+        const obj = {num1: 4, num2: 2};
+        expect(apTests.getTotalData(obj)).toStrictEqual({total: 26});
+    });
+});
+
+describe("Tax", () => {
+    test('Get tax', () => {
+        const obj = {num1: 4, num2: 2};
+        expect(apTests.getTaxData(obj)).toStrictEqual({tax: 56});
+    });
+});

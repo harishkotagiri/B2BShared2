@@ -1,4 +1,4 @@
-const getTaxData = (reqObj) => {
+function getTaxData(reqObj) {
     const tempObj = (typeof reqObj !== 'object') ? JSON.parse(reqObj) : reqObj
     const val = parseInt(tempObj.num1) + parseInt(tempObj.num2) + 50;    
     return {tax: val};
@@ -6,7 +6,7 @@ const getTaxData = (reqObj) => {
 
 function getTotalData(reqObj) {
     const tempObj = (typeof reqObj !== 'object') ? JSON.parse(reqObj) : reqObj
-    const val = parseInt(tempObj.num1) + parseInt(tempObj.num2) + 10;    
+    const val = parseInt(tempObj.num1) + parseInt(tempObj.num2) + 20;    
     return {total: val};
 }
 
@@ -43,4 +43,7 @@ window.calculateVals = (val1, val2) => {
     return val1 + val2;
 }
 
-module.exports = getTotalData;
+module.exports = {
+    getTotalData,
+    getTaxData
+};
